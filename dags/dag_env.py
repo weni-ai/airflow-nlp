@@ -56,7 +56,7 @@ def bye():
             lowest_val = float(val_loss)
             model_path = 'outputs/' + fold_nam    
     model = SimpleT5()
-    model.load_model("t5", model_path, use_gpu=True)
+    model.load_model("t5", model_path, use_gpu=False)
     res = model.predict('qual o nome da autora ? Ana')
     print('teste_teste_teste', res)
 

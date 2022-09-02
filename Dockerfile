@@ -2,7 +2,7 @@
 
 FROM apache/airflow:2.3.4
 
-RUN pip install --no-cache-dir mlflow datetime pandas sklearn transformers torch simplet5
+RUN pip install --no-cache-dir mlflow datetime pandas sklearn transformers torch simplet5 apache-airflow-providers-amazon
 
 COPY dags/* /opt/airflow/dags/
 COPY plugins/* /opt/airflow/plugins/

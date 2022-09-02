@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 import os
 import re
 import glob
-from airflow.providers.amazon.aws.sensors.s3_key import S3KeySensor
+from airflow.providers.amazon.aws.sensors.s3 import S3KeySensor
 
 
 default_args = {
@@ -65,9 +65,9 @@ def hi():
 
 with DAG(
     default_args=default_args,
-    dag_id='dag_number_7',
+    dag_id='dag_number_1',
     description='First dag',
-    start_date=datetime(2022, 8, 7),
+    start_date=datetime(2022, 9, 2),
     schedule_interval='@daily'
 ) as dag:
 
